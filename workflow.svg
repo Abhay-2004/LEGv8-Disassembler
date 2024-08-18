@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3e7e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e3eeff;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  
+  <style>
+    .box { fill: #ffffff; stroke: #333; stroke-width: 2; filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.3)); }
+    .arrow { fill: none; stroke: #555; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+    .small-text { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+    .title { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #333; }
+    .input { fill: #ff9999; }
+    .process { fill: #99ccff; }
+    .output { fill: #99ff99; }
+    .sub-process { fill: #ffcc99; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="400" r="30" fill="#ffcc99" opacity="0.5" />
+  <circle cx="750" cy="50" r="40" fill="#99ccff" opacity="0.5" />
+  <path d="M0 450 Q400 350 800 450" stroke="#99ff99" stroke-width="5" fill="none" opacity="0.3" />
+
+  <!-- Title -->
+  <text x="400" y="40" class="title" text-anchor="middle">LEGv8 Disassembler Workflow</text>
+
+  <!-- Input -->
+  <rect x="50" y="80" width="120" height="60" rx="10" class="box input"/>
+  <text x="110" y="115" class="text" text-anchor="middle">Binary File Input</text>
+  <text x="110" y="135" class="small-text" text-anchor="middle">(Big-endian)</text>
+
+  <!-- Instruction Fetch -->
+  <rect x="240" y="80" width="120" height="60" rx="10" class="box process"/>
+  <text x="300" y="105" class="text" text-anchor="middle">Instruction</text>
+  <text x="300" y="125" class="text" text-anchor="middle">Fetch</text>
+
+  <!-- Endianness Conversion -->
+  <rect x="240" y="180" width="120" height="60" rx="10" class="box sub-process"/>
+  <text x="300" y="205" class="text" text-anchor="middle">Endianness</text>
+  <text x="300" y="225" class="text" text-anchor="middle">Conversion</text>
+
+  <!-- Instruction Decode -->
+  <rect x="430" y="80" width="120" height="60" rx="10" class="box process"/>
+  <text x="490" y="105" class="text" text-anchor="middle">Instruction</text>
+  <text x="490" y="125" class="text" text-anchor="middle">Decode</text>
+
+  <!-- Opcode Mapping -->
+  <rect x="430" y="180" width="120" height="60" rx="10" class="box sub-process"/>
+  <text x="490" y="205" class="text" text-anchor="middle">Opcode</text>
+  <text x="490" y="225" class="text" text-anchor="middle">Mapping</text>
+
+  <!-- Field Extraction -->
+  <rect x="430" y="280" width="120" height="60" rx="10" class="box sub-process"/>
+  <text x="490" y="305" class="text" text-anchor="middle">Field</text>
+  <text x="490" y="325" class="text" text-anchor="middle">Extraction</text>
+
+  <!-- Assembly Generation -->
+  <rect x="620" y="80" width="120" height="60" rx="10" class="box process"/>
+  <text x="680" y="105" class="text" text-anchor="middle">Assembly</text>
+  <text x="680" y="125" class="text" text-anchor="middle">Generation</text>
+
+  <!-- Label Generation -->
+  <rect x="620" y="180" width="120" height="60" rx="10" class="box sub-process"/>
+  <text x="680" y="205" class="text" text-anchor="middle">Label</text>
+  <text x="680" y="225" class="text" text-anchor="middle">Generation</text>
+
+  <!-- Output -->
+  <rect x="620" y="280" width="120" height="60" rx="10" class="box output"/>
+  <text x="680" y="315" class="text" text-anchor="middle">Assembly Output</text>
+
+  <!-- Arrows -->
+  <path d="M170 110 H230" class="arrow"/>
+  <path d="M360 110 H420" class="arrow"/>
+  <path d="M550 110 H610" class="arrow"/>
+  <path d="M300 140 V170" class="arrow"/>
+  <path d="M300 240 V150" class="arrow"/>
+  <path d="M490 140 V170" class="arrow"/>
+  <path d="M490 240 V270" class="arrow"/>
+  <path d="M680 140 V170" class="arrow"/>
+  <path d="M680 240 V270" class="arrow"/>
+</svg>
