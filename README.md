@@ -12,9 +12,7 @@
 9. [Testing](#testing)
 10. [Performance Considerations](#performance-considerations)
 11. [Future Improvements](#future-improvements)
-12. [Contributing](#contributing)
-13. [License](#license)
-14. [Acknowledgments](#acknowledgments)
+
 
 ## Project Overview
 
